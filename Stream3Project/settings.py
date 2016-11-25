@@ -173,3 +173,4 @@ CLEARDB_DATABASE_URL = os.environ.get("CLEARDB_DATABASE_URL", "")
 
 DATABASES['default'] = dj_database_url.parse(CLEARDB_DATABASE_URL)
 
+ALLOWED_HOSTS = ['counterpoint2020.herokuapp.com', 'localhost']

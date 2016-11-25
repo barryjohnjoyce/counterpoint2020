@@ -1,1 +1,1 @@
-web: gunicorn Stream3Project .wsgi:application
+web: gunicorn Stream3Project.wsgi:application
