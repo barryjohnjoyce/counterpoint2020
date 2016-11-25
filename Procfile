@@ -1,1 +1,1 @@
-web: gunicorn counterpoint2020.wsgi:application
+web: gunicorn Stream3Project .wsgi:application
