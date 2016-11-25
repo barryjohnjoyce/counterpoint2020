@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% load thread_extras %}
+{% block content %}
+
+
+
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Page Heading/Breadcrumbs -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">{{ subject.name }}
+                    <small>Subheading</small>
+                </h1>
+                <ol class="breadcrumb">
+                    <li><a href="index.html">Home</a>
+                    </li>
+                    <li><a href="index.html">Forum</a>
+                    </li>
+                    <li class="active">{{ subject.name }}</li>
+
+                </ol>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Content Row -->
+        <div class="row">
+            <div class="col-lg-12">
+
+                <div class="col-md-12">
+                    {% if user.is_authenticated %}
+                        <p>
+                            <a href="{% url 'new_thread' subject.id %}" class="btn btn-primary">New Thread</a>
+                        </p>
+                    {% endif %}
+                    {% for thread in subject.threads.all %}
+                        {% include "forum/thread_title.html" %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+
+{% endblock %}
