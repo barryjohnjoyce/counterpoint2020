@@ -1,0 +1,1 @@
+web: gunicorn counterpoint2020.wsgi:application
