@@ -130,3 +130,22 @@
 
     /*background = "{% static 'images/marble.jpg' %}"*/
 }
+
+/*.callaghanimage {*/
+/*width: 250px;*/
+    /*height: 150px;*/
+/*}*/
+
+IMG.callaghanimage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+    height: 75%;
+
+}
+
+.titlediv{
+    text-align: center;
+}
+

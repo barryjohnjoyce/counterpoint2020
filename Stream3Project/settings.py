@@ -26,7 +26,7 @@ SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+
 
 
 # Application definition
@@ -91,15 +91,18 @@ WSGI_APPLICATION = 'Stream3Project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 
-
+#
 
 DATABASES = {
     'default': {
-        # 'ENGINE': 'django.db.backends.sqlite3', //Commented out original settings in order to push to heroku
-        # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'), //Commented out original settings in order to push to heroku
-
+        'ENGINE': 'django.db.backends.sqlite3', # Commented out original settings in order to push to heroku
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'), # Commented out original settings in order to push to heroku
     }
 }
+
+# CLEARDB_DATABASE_URL = os.environ.get("CLEARDB_DATABASE_URL", "")
+#
+# DATABASES['default'] = dj_database_url.parse(CLEARDB_DATABASE_URL)
 
 
 # Password validation
@@ -169,8 +172,6 @@ TINYMCE_JS_ROOT = os.path.join(BASE_DIR, "static", 'js', 'tinymce', 'tinymce.min
 GRAVATAR_DEFAULT_URL = "http://placehold.it/100"
 
 
-CLEARDB_DATABASE_URL = os.environ.get("CLEARDB_DATABASE_URL", "")
 
-DATABASES['default'] = dj_database_url.parse(CLEARDB_DATABASE_URL)
 
-ALLOWED_HOSTS = ['counterpoint2020.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['counterpoint2020.herokuapp.com', '127.0.0.1']
