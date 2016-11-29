@@ -95,14 +95,14 @@ WSGI_APPLICATION = 'Stream3Project.wsgi.application'
 
 DATABASES = {
     'default': {
-        # 'ENGINE': 'django.db.backends.sqlite3', # Commented out original settings in order to push to heroku
-        # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'), # Commented out original settings in order to push to heroku
+        'ENGINE': 'django.db.backends.sqlite3', # Commented out original settings in order to push to heroku
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'), # Commented out original settings in order to push to heroku
     }
 }
-
-CLEARDB_DATABASE_URL = os.environ.get("CLEARDB_DATABASE_URL", "")
-
-DATABASES['default'] = dj_database_url.parse(CLEARDB_DATABASE_URL)
+#
+# CLEARDB_DATABASE_URL = os.environ.get("CLEARDB_DATABASE_URL", "")
+#
+# DATABASES['default'] = dj_database_url.parse(CLEARDB_DATABASE_URL)
 
 
 # Password validation
