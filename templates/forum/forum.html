@@ -14,7 +14,7 @@
                 <h1 class="page-header">Forum
                     <small>Thread Subjects</small>
                 </h1>
-                <ol class="breadcrumb">
+                <ol class="breadcrumb" style="border: 5px darkred solid">
                     <li><a href="index.html">Home</a>
                     </li>
                     <li class="active">Forum</li>
@@ -31,9 +31,9 @@
                 {% for subject in subjects %}
 
                     <section class="subject">
-                        <h2><a href="{% url 'threads' subject.id %}">{{ subject.name }}</a></h2>
+                        <h2><a style="color: black" href="{% url 'threads' subject.id %}">{{ subject.name }}</a></h2>
                         <p>
-                            <a href="{% url 'threads' subject.id %}">
+                            <a style="color: black" href="{% url 'threads' subject.id %}">
                                 {% autoescape off %}{{ subject.description }}{% endautoescape %}
                             </a>
                         </p>
@@ -48,6 +48,7 @@
                             </tr>
                         </table>
                     </section>
+                    <hr>
                 {% endfor %}
 
 

@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
+    {% load staticfiles %}
 
 
     <!-- Page Content -->
@@ -11,7 +12,7 @@
                 <h1 class="page-header">Contact Us
                     <small>Get In Touch</small>
                 </h1>
-                <ol class="breadcrumb">
+                <ol class="breadcrumb" style="border: solid darkred 5px">
                     <li><a href="index.html">Home</a>
                     </li>
                     <li class="active">Contact</li>
@@ -27,45 +28,46 @@
             <div class="col-md-4">
                 <h3>Contact Details</h3>
                 <p>
-                    3481 Melrose Place<br>Beverly Hills, CA 90210<br>
+                    14 Merrion Sq., Dublin 2, Ireland<br>
                 </p>
                 <p><i class="fa fa-phone"></i>
                     <abbr title="Phone">P</abbr>: (123) 456-7890</p>
                 <p><i class="fa fa-envelope-o"></i>
-                    <abbr title="Email">E</abbr>: <a href="mailto:name@example.com">name@example.com</a>
+                    <abbr title="Email">E</abbr>: <a style="color: darkblue" href="mailto:name@example.com">counterpoint2020@gmail.com</a>
                 </p>
                 <p><i class="fa fa-clock-o"></i>
                     <abbr title="Hours">H</abbr>: Monday - Friday: 9:00 AM to 5:00 PM</p>
                 <ul class="list-unstyled list-inline list-social-icons">
                     <li>
-                        <a href="#"><i class="fa fa-facebook-square fa-2x"></i></a>
+                        <a href="www.facebook.com"><i class="fa fa-facebook-square fa-2x" style="color: darkblue"></i></a>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-linkedin-square fa-2x"></i></a>
+                        <a href="www.linkedin.com"><i class="fa fa-linkedin-square fa-2x" style="color: darkblue"></i></a>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-twitter-square fa-2x"></i></a>
+                        <a href="www.twitter.com"><i class="fa fa-twitter-square fa-2x" style="color: darkblue"></i></a>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-google-plus-square fa-2x"></i></a>
+                        <a href="www.googleplus.com"><i class="fa fa-google-plus-square fa-2x" style="color: darkblue"></i></a>
                     </li>
                 </ul>
             </div>
 
               <!-- Contact Details Column - Image -->
             <div class="col-md-8">
-
-                <img class="img-responsive" src="http://placehold.it/850x240" alt="">
+                <img class="img-responsive" src = "{% static 'images/capitol.jpg' %}">
             </div>
 
 
         </div>
         <!-- /.row -->
 
+        <br>
+
         <!-- Contact Form -->
         <!-- In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12" style="border: darkred solid 5px; border-radius: 10px">
                 <h3>Send us a Message</h3>
                 <form name="sentMessage" id="contactForm" novalidate>
                     <div class="control-group form-group">

@@ -40,6 +40,12 @@
 {#    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>#}
 {#    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>#}
 
+{#    <!-- Script to Activate the Carousel -->#}
+{#    <script>#}
+{#    $('.carousel').carousel({#}
+{#        interval: 5000 //changes the speed#}
+{#    })#}
+{#    </script>#}
 
 
 {% block head_js %}{% endblock head_js %}
@@ -48,7 +54,7 @@
 
 </head>
 
-<body background = "{% static 'images/marble.jpg' %}">
+<body style="background: darkgray">
 
 
     <!-- Navigation -->
@@ -123,12 +129,14 @@
             </div>
         {%endif%}
 
+
+
     <!-- Page Content -->
-    <div class="container">
+
         {% block content %}
         {%  endblock %}
-     <hr>
-    </div>
+
+
 
        <!-- Footer -->
         <footer>
@@ -143,6 +151,8 @@
     <!­­script references­­>
 {#    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>#}
 {#    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>#}
+
+
 
 
 </body>

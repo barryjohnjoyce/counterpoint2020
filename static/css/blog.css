@@ -50,10 +50,7 @@
     /*color: #12AB82;*/
 /*}*/
 
-.story-img{
-    margin-top: 25%;
-    display: block;
-}
+
 
 /*a, a:hover {*/
     /*color: #a223344;*/
@@ -116,6 +113,12 @@
     /*}*/
 /*}*/
 
+
+.story-img{
+    margin-top: 25%;
+    display: block;
+}
+
 .acropolisimage {
     width: 100%;
 }
@@ -149,3 +152,15 @@ IMG.callaghanimage {
     text-align: center;
 }
 
+.linksimage{
+    max-width: 100%;
+    height: auto;
+}
+
+.whitefont{
+    color: white;
+}
+
+.panelbackground{
+    background: darkred;
+}

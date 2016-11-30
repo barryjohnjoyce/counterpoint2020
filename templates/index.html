@@ -3,91 +3,54 @@
 {%  load staticfiles %}
 
 
-    <div class="row"><img class="acropolisimage" src = "{% static 'images/acropolis.jpg' %}">
-                <div class="col-lg-12">
-
-                </div>
-            </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <img class="acropolisimage" src = "{% static 'images/acropolistitle.jpg' %}">
+        </div>
+    </div>
 
     <!-- Page Content -->
     <div class="container">
 
         <!-- Title-->
-        <div class="row" style="border: solid black 5px">
-            <div class="col-lg-12 titlediv">
-                <h1 class="page-header">
-                    Counterpoint 2020
-                </h1>
-                <h3><em>Political Discussion For A Post-Truth Age</em></h3>
-                <br>
-            </div>
-
-            <!--  Callaghan Quote-->
-            <div class="row" style="border: red solid 5px">
-
-
-                <div class="col-md-1">
-                </div>
-                <div class="col-md-4" style="margin-left: auto; margin-right: auto; border: 5px blue solid">
-{#                    <img class="img-responsive" src="http://placehold.it/150x150" alt="">#}
-                    <img class="img-responsive callaghanimage" src = "{% static 'images/callaghan.jpg' %}">
-                </div>
-
-                <div class="col-md-6" style="text-align:right; border: green solid 5px">
-                    <br>
-                    <p><strong>"A lie can be halfway round the world before the truth has got its boots on."</strong></p>
-                    <br>
-                    <p> James Callaghan 1912 - 2005</p>
-                    <p> <em>Former Prime Minister of the United Kingdom (1975-79)</em></p>
-                </div>
-            </div>
-
-            <div class="col-md-1">
-                </div>
-            <!-- /.row -->
-
-
+        <div class="row">
             <hr>
-
-
-
-
             <div class="col-md-4">
                 <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4><i class="fa fa-fw fa-check"></i> Who Are We?</h4>
+                    <div class="panel-heading"  style="background: darkred">
+                        <h4 class="whitefont"><i class="fa fa-fw fa-check whitefont"></i> Who Are We?</h4>
                     </div>
                     <div class="panel-body">
                         <p>Viewpoint 2020 was established to provide an accountable and moderated forum for political
-                        discussion. Owing to the huge shifts in political discourse in 2016 and the increasing use of
+                        discourse. Owing to the huge shifts in political discourse in 2016 and the increasing use of
                         social media as an outlet for political expression...</p>
-                        <a href="{%  url 'about'  %}" class="btn btn-default">Learn More</a>
+                        <a href="{%  url 'about'  %}" class="btn btn-danger">Learn More</a>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4><i class="fa fa-fw fa-book"></i> What We Do</h4>
+                    <div class="panel-heading" style="background: darkred">
+                        <h4 class="whitefont"><i class="fa fa-fw fa-book whitefont"></i> What We Do</h4>
                     </div>
                     <div class="panel-body">
                         <p>We provide a blog to update members on new developments in the political sphere and a
                             moderated forum for members to open threads on various topics grouped into three
                             main subjects - European, American and World Politics...</p>
-                        <a href="#" class="btn btn-default">Learn More</a>
+                        <a href="{%  url 'blog'  %}" class="btn btn-danger">Learn More</a>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4><i class="fa fa-fw fa-compass"></i> How To Join</h4>
+                    <div class="panel-heading" style="background: darkred">
+                        <h4 class="whitefont"><i class="fa fa-fw fa-compass whitefont"></i> How To Join</h4>
                     </div>
                     <div class="panel-body">
                         <p>Viewpoint 2020 is a subscription site with a monthly payment of only €2. We charge a
                         subscription not only in order to cover the costs of running the site, but also to provide a
                         form of verifiable identiy for our members and posters....</p>
-                        <a href="#" class="btn btn-default">Learn More</a>
+                        <a href="#" class="btn btn-danger">Learn More</a>
                     </div>
                 </div>
             </div>
@@ -100,25 +63,28 @@
                 <h2 class="page-header">Links</h2>
             </div>
             <div class="col-md-4 col-sm-6">
-                <a href="portfolio-item.html">
-                    <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
-
+                <a href="{%  url 'forum'  %}">
+{#                    <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">#}
+                    <img class="img-responsive img-portfolio img-hover linksimage" src = "{% static 'images/irishparliament.jpg' %}">
                 </a>
             </div>
             <div class="col-md-4 col-sm-6">
-                <a href="portfolio-item.html">
-                    <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
+                <a href="{%  url 'blog'  %}">
+{#                    <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">#}
+                    <img class="img-responsive img-portfolio img-hover  linksimage" src = "{% static 'images/scribe.jpg' %}">
                 </a>
             </div>
             <div class="col-md-4 col-sm-6">
-                <a href="portfolio-item.html">
-                    <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
+                <a href="{%  url 'login'  %}">
+{#                    <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">#}
+                    <img class="img-responsive img-portfolio img-hover" src = "{% static 'images/ladywriting.jpg' %}">
                 </a>
             </div>
 
         </div>
 
-        <hr>
+        <br>
+        <br>
         <!-- /.row -->
 
         <!-- Quote Of The Week Section -->
@@ -126,16 +92,15 @@
 
             <div class="col-md-6">
                 <h2 class="page-header">Political Quote Of The Week</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, omnis doloremque non cum id
-                    reprehenderit, quisquam totam aspernatur tempora minima unde aliquid ea culpa sunt. Reiciendis quia
-                    dolorum ducimus unde.</p>
                 <br>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, omnis doloremque non cum id
-                    reprehenderit, quisquam totam aspernatur tempora minima unde aliquid ea culpa sunt. Reiciendis quia
-                    dolorum ducimus unde.</p>
+                <p><strong>"To jaw-jaw is always better than to war-war"</strong></p>
+                <br>
+                <p>Sir Winston Churchill 1874-1965</p>
+                <p><em>Former Prime Minister of the United Kingom and wartime leader</em></p>
             </div>
             <div class="col-md-6">
-                <img class="img-responsive" src="http://placehold.it/700x450" alt="">
+{#                <img class="img-responsive" src="http://placehold.it/700x450" alt="">#}
+                <img class="img-responsive img-portfolio img-hover" src = "{% static 'images/churchill.jpg' %}">
             </div>
         </div>
         <!-- /.row -->
@@ -147,16 +112,15 @@
             <div class="row">
                 <div class="col-md-8">
                     <p>As can be imagined, it takes a lot of work to organise and moderate this site. While some of the cost is covered by
-                    your subscriptions, we appreciate any extra donations that you may be able to afford in order to ensure that Viewpoint 2020
-                    remains a centre of discussion in a post-truth world.</p>
+                    your subscriptions, we appreciate any extra donations that you may be able to afford.</p>
                 </div>
                 <div class="col-md-4">
-                    <a class="btn btn-lg btn-default btn-block" href="#">Donate</a>
+                    <a class="btn btn-lg btn-danger btn-block" href="#">Donate</a>
                 </div>
             </div>
         </div>
 
-        <hr>
+
     </div>
 
 {%  endblock %}

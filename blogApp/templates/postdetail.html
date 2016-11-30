@@ -11,11 +11,11 @@
         <div class="row">
             <div class="col-lg-12">
                 <h1 class="page-header">Blog Post
-                    <small>by <a href="#">"{{ post.author }}" </a>
+                    <small>by <a style="color: black" href="#">"{{ post.author }}" </a>
                     </small>
 
                 </h1>
-                <ol class="breadcrumb">
+                <ol class="breadcrumb" style="border: darkred solid 5px">
                     <li><a href="index.html">Home</a>
                     </li>
                     <li class="active">Blog Post</li>
@@ -29,16 +29,16 @@
 
             <div class="col-md-2 col-sm-3 text-center">
                 <a class="story-img" href="#">
-                    <img src="{% gravatar_url post.author.email 150 %}">
+                    <img style="border: darkred solid 5px" src="{% gravatar_url post.author.email 150 %}">
 
                 </a>
 
             </div>
                 <!-- Blog Post Content Column -->
-            <div class="col-lg-10">
+{#            <div class="col-lg-10">#}
 
 
-                <div class="col-md-10 col-sm-9">
+            <div class="col-md-10 col-sm-9">
 
                     <!-- Blog Post Title-->
                     <h3>{{ post.title }}</h3>
@@ -64,20 +64,17 @@
                             </p>
                             <p>{{ post.published_date }} | <strong>Views</strong> {{ post.views }} |
                                 <strong>Tag </strong>{{ post.tag }}</p>
-                            <p> {% load disqus_tags %} {% set_disqus_title post.title %} {% disqus_show_comments %}</p>
+                            <div style="background-color: white; padding: 5px; border-radius: 5px"> {% load disqus_tags %} {% set_disqus_title post.title %} {% disqus_show_comments %}</div>
                         </div>
                     </div>
-                </div>
-
-
-
             </div>
 
 
 
+{#            </div>#}
         </div>
         <!-- /.row -->
-
+    </div>
         <hr>
 
 {% endblock %}
