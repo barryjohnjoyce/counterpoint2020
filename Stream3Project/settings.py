@@ -100,7 +100,7 @@ DATABASES = {
         # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'), # Commented out original settings in order to push to heroku
     }
 }
-#
+
 
 CLEARDB_DATABASE_URL = os.environ.get("CLEARDB_DATABASE_URL", "") #database settings for heroku deploy - comment out for local host operation
 
