@@ -47,7 +47,7 @@
                         <!-- Blog Post Image-->
                         <div class="col-xs-9">
                             {% if post.image %}
-                            <img class="img-responsive" src="/media/{{ post.image}}">
+                            <img class="img-responsive" src="{{ MEDIA_URL }}{{ post.image}}">
                             {% endif %}
 
                             <!-- Blog Post Content-->
