@@ -25,7 +25,7 @@
         <div class="row">
 
             <!-- Contact Details Column -->
-            <div class="col-md-4">
+            <div class="col-md-6">
                 <h3>Contact Details</h3>
                 <p>
                     14 Merrion Sq., Dublin 2, Ireland<br>
@@ -51,24 +51,16 @@
                         <a href="www.googleplus.com"><i class="fa fa-google-plus-square fa-2x" style="color: darkblue"></i></a>
                     </li>
                 </ul>
+                <br>
+                <img class="img-responsive" src = "{% static 'images/capitol.jpg' %}">
+                <br>
             </div>
+
+
 
               <!-- Contact Details Column - Image -->
-            <div class="col-md-8">
-                <img class="img-responsive" src = "{% static 'images/capitol.jpg' %}">
-            </div>
-
-
-        </div>
-        <!-- /.row -->
-
-        <br>
-
-        <!-- Contact Form -->
-        <!-- In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
-        <div class="row">
-            <div class="col-md-12" style="border: darkred solid 5px; border-radius: 10px">
-                <h3>Send us a Message</h3>
+            <div class="col-md-6" style="border: darkred solid 5px; border-radius: 10px;">
+                <h3>Send us a Message!</h3>
                 <form name="sentMessage" id="contactForm" novalidate>
                     <div class="control-group form-group">
                         <div class="controls">
@@ -98,8 +90,9 @@
                     <div id="success"></div>
                     <!-- For success/fail messages -->
                     <button type="submit" class="btn btn-primary">Send Message</button>
-                </form>
+                </form><br>
             </div>
+
 
         </div>
         <!-- /.row -->
