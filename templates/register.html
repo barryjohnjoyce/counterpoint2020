@@ -25,7 +25,7 @@
                 <h1 class="page-header">Register
                     <small>Join Us!</small>
                 </h1>
-                <ol class="breadcrumb" style="border: 5px darkred solid">
+                <ol class="breadcrumb">
                     <li><a href="{%  url 'index'  %}">Home</a>
                     </li>
                     <li class="active">Register</li>
@@ -36,7 +36,7 @@
 
         <!-- Content Row -->
         <div class="row">
-            <div class="col-lg-8">
+            <div class="col-lg-6">
 
                     <form role="form" method="post" id="register-form" action="{% url 'register' %}">
                         <div id="credit-card-errors" style="display:none">
@@ -53,9 +53,9 @@
                     </form>
             </div>
 
-            <div class="col-lg-4">
+            <div class="col-lg-6">
                 <br><br>
-                <img class="img-responsive" style="border: 5px darkred solid; border-radius: 10px" src = "{% static 'images/eisenhowerquote.jpg' %}">
+                <img class="img-responsive" style="border: 5px darkred solid; border-radius: 10px; opacity: .8" src = "{% static 'images/eisenhowerquote.jpg' %}">
 
 
 

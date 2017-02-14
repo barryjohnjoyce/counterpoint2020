@@ -23,7 +23,6 @@ from django.views.static import serve
 from threadsApp import views as forum_views
 import threadsApp
 
-
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', homeApp_views.get_index, name='index'),
@@ -55,4 +54,5 @@ urlpatterns = [
 
     # Poll Views
     url(r'^thread/vote/(?P<thread_id>\d+)/(?P<subject_id>\d+)/$', forum_views.thread_vote, name='cast_vote'),
+
 ]

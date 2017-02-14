@@ -164,3 +164,8 @@ IMG.callaghanimage {
 .panelbackground{
     background: darkred;
 }
+
+.jumbotron{
+    font-size: 28px;
+    text-align: center;
+}
