@@ -167,16 +167,16 @@ GRAVATAR_DEFAULT_URL = "http://placehold.it/100"
 ALLOWED_HOSTS = ['counterpoint2020.herokuapp.com', '127.0.0.1']
 
 
-# AWS_HEADERS = {  # see http://developer.yahoo.com/performance/rules.html#expires
-#     'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
-#     'Cache-Control': 'max-age=94608000',
-# }
-#
-# AWS_STORAGE_BUCKET_NAME = os.getenv('AWS_STORAGE_BUCKET_NAME')
-# AWS_ACCESS_KEY_ID = os.getenv('AWS_ACCESS_KEY_ID')
-# AWS_SECRET_ACCESS_KEY = os.getenv('AWS_SECRET_ACCESS_KEY')
-# AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
-# AWS_S3_HOST = 's3-eu-west-1.amazonaws.com'
+AWS_HEADERS = {  # see http://developer.yahoo.com/performance/rules.html#expires
+    'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+    'Cache-Control': 'max-age=94608000',
+}
+
+AWS_STORAGE_BUCKET_NAME = os.getenv('AWS_STORAGE_BUCKET_NAME')
+AWS_ACCESS_KEY_ID = os.getenv('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = os.getenv('AWS_SECRET_ACCESS_KEY')
+AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+AWS_S3_HOST = 's3-eu-west-1.amazonaws.com'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
@@ -188,13 +188,13 @@ ALLOWED_HOSTS = ['counterpoint2020.herokuapp.com', '127.0.0.1']
 #     os.path.join(BASE_DIR, "static"), #commented out for AWS implementation
 # )
 
-# STATICFILES_LOCATION = 'static'
-# STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+STATICFILES_LOCATION = 'static'
+STATICFILES_STORAGE = 'custom_storages.StaticStorage'
 STATIC_URL = "https://%s/" % AWS_S3_CUSTOM_DOMAIN
 
 
-# MEDIAFILES_LOCATION = 'media'
-# DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+MEDIAFILES_LOCATION = 'media'
+DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
 MEDIA_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, MEDIAFILES_LOCATION)
 
 #
