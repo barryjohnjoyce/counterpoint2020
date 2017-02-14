@@ -93,12 +93,12 @@ WSGI_APPLICATION = 'Stream3Project.wsgi.application'
 
 #
 
-# DATABASES = {
-#     'default': {
+DATABASES = {
+    'default': {
 #         'ENGINE': 'django.db.backends.sqlite3', # local host operation - Comment out original settings in order to push to heroku
 #         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'), # local host operation - comment out original settings in order to push to heroku
-#     }
-# }
+    }
+}
 
 
 CLEARDB_DATABASE_URL = os.environ.get("CLEARDB_DATABASE_URL", "")
