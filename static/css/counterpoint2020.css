@@ -119,11 +119,16 @@
     display: block;
 }
 
+.jumbotron{
+    font-size: 28px;
+    text-align: center;
+}
+
 .acropolisimage {
     width: 100%;
 }
 
-#footerdiv {
+#footerDiv {
     text-align: center;
     font-weight: bold;
 }
