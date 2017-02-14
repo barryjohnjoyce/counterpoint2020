@@ -182,7 +182,7 @@ AWS_S3_HOST = 's3-eu-west-1.amazonaws.com'
 # STATIC_ROOT = ''
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, "static"), #comment out for AWS implementation
+    os.path.join(BASE_DIR, "static"),
 )
 
 STATICFILES_LOCATION = 'static'
@@ -196,7 +196,7 @@ MEDIA_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, MEDIAFILES_LOCATION)
 
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media') #commented out for AWS implementation
-# MEDIA_URL = '/media/' #commented out for AWS implementation
+# MEDIA_URL = '/media/' #comment out for AWS implementation
 
 
 
