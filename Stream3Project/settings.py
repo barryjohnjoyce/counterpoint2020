@@ -179,7 +179,7 @@ AWS_S3_HOST = 's3-eu-west-1.amazonaws.com'
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 # STATIC_URL = '/static/' #comment out for AWS implementation
-STATIC_ROOT = ''
+# STATIC_ROOT = ''
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"), #comment out for AWS implementation
@@ -194,7 +194,7 @@ MEDIAFILES_LOCATION = 'media'
 DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
 MEDIA_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, MEDIAFILES_LOCATION)
 
-#
+
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media') #commented out for AWS implementation
 # MEDIA_URL = '/media/' #commented out for AWS implementation
 
