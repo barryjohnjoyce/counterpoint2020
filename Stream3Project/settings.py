@@ -139,15 +139,6 @@ USE_L10N = True
 USE_TZ = True
 
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/1.10/howto/static-files/
-
-STATIC_URL = '/static/'
-STATIC_ROOT = ''
-
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, "static"),
-)
 
 AUTH_USER_MODEL = 'accountsApp.User'
 
@@ -158,8 +149,7 @@ AUTHENTICATION_BACKENDS = (
 
 DISQUS_WEBSITE_SHORTNAME='Stream3Project'
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-MEDIA_URL = '/media/'
+
 
 SITE_ID = 1
 
@@ -188,32 +178,31 @@ ALLOWED_HOSTS = ['counterpoint2020.herokuapp.com', '127.0.0.1']
 # AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 # AWS_S3_HOST = 's3-eu-west-1.amazonaws.com'
 
-# STATIC_URL = '/static/'
-# STATICFILES_DIRS = (
-#    os.path.join(BASE_DIR, "static"),
-# )
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/1.10/howto/static-files/
+
+STATIC_URL = '/static/' #commented out for AWS implementation
+STATIC_ROOT = ''
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "static"), #commented out for AWS implementation
+)
+
+
 # STATICFILES_LOCATION = 'static'
 # STATICFILES_STORAGE = 'custom_storages.StaticStorage'
 # STATIC_URL = "https://%s/" % AWS_S3_CUSTOM_DOMAIN
 #
-# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 # MEDIAFILES_LOCATION = 'media'
-# MEDIA_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, MEDIAFILES_LOCATION)
 # DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+# MEDIA_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, MEDIAFILES_LOCATION)
 
 
-# MEDIA_ROOT = os.path.join(BASE_DIR, 'media') #commented out for AWS implementation
-# MEDIA_URL = '/media/' #commented out for AWS implementation
-#
-# # Static files (CSS, JavaScript, Images)
-# # https://docs.djangoproject.com/en/1.10/howto/static-files/
-#
-# STATIC_URL = '/static/' #commented out for AWS implementation
-# STATIC_ROOT = ''
-#
-# STATICFILES_DIRS = (
-#     os.path.join(BASE_DIR, 'static'),
-# ) #commented out for AWS implementation
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media') #commented out for AWS implementation
+MEDIA_URL = '/media/' #commented out for AWS implementation
+
+
 
 
 
