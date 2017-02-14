@@ -90,17 +90,17 @@ WSGI_APPLICATION = 'Stream3Project.wsgi.application'
 
 DATABASES = {
     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3', # local host operation - Comment out original settings in order to push to heroku
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'), # local host operation - comment out original settings in order to push to heroku
+        'ENGINE': 'django.db.backends.sqlite3', # local host operation - Comment out original settings in order to push to heroku
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'), # local host operation - comment out original settings in order to push to heroku
     }
 }
 
 
-CLEARDB_DATABASE_URL = os.environ.get("CLEARDB_DATABASE_URL", "")
-#database settings for heroku deploy - comment out for local host operation
-
-DATABASES['default'] = dj_database_url.parse(CLEARDB_DATABASE_URL)
-#database settings for heroku deploy - comment out for local host operation
+# CLEARDB_DATABASE_URL = os.environ.get("CLEARDB_DATABASE_URL", "")
+# #database settings for heroku deploy - comment out for local host operation
+#
+# DATABASES['default'] = dj_database_url.parse(CLEARDB_DATABASE_URL)
+# #database settings for heroku deploy - comment out for local host operation
 
 
 # Password validation
@@ -163,11 +163,14 @@ GRAVATAR_DEFAULT_URL = "http://placehold.it/100"
 
 ALLOWED_HOSTS = ['counterpoint2020.herokuapp.com', '127.0.0.1']
 
+# NB: The AWS headers are commented out temporarily as the app will be in active development for some time.
+#     This is to prevent static files being cached for an extended period.
 
 # AWS_HEADERS = {  # see http://developer.yahoo.com/performance/rules.html#expires
 #     'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
 #     'Cache-Control': 'max-age=94608000',
 # }
+
 
 AWS_STORAGE_BUCKET_NAME = os.getenv('AWS_STORAGE_BUCKET_NAME')
 AWS_ACCESS_KEY_ID = os.getenv('AWS_ACCESS_KEY_ID')
