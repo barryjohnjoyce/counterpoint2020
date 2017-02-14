@@ -1,0 +1,50 @@
+
+.story-img{
+    margin-top: 25%;
+    display: block;
+}
+
+.jumbotron{
+    font-size: 28px;
+    text-align: center;
+}
+
+.acropolisimage {
+    width: 100%;
+}
+
+#footerDiv {
+    text-align: center;
+    font-weight: bold;
+}
+
+/*IMG.callaghanimage {*/
+    /*display: block;*/
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
+    /*width: 75%;*/
+    /*height: 75%;*/
+
+/*}*/
+
+.titlediv{
+    text-align: center;
+}
+
+.linksimage{
+    max-width: 100%;
+    height: auto;
+}
+
+.whitefont{
+    color: white;
+}
+
+.panelbackground{
+    background: darkred;
+}
+
+.jumbotron{
+    font-size: 28px;
+    text-align: center;
+}
