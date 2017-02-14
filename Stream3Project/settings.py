@@ -49,7 +49,7 @@ INSTALLED_APPS = [
     'pollsApp',
     'django_gravatar',
 
-    # 'storages',
+    'storages',
 
 
 ]
@@ -93,17 +93,17 @@ WSGI_APPLICATION = 'Stream3Project.wsgi.application'
 
 #
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3', # Commented out original settings in order to push to heroku
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'), # Commented out original settings in order to push to heroku
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3', # Commented out original settings in order to push to heroku
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'), # Commented out original settings in order to push to heroku
+#     }
+# }
 
 
-# CLEARDB_DATABASE_URL = os.environ.get("CLEARDB_DATABASE_URL", "") #database settings for heroku deploy - comment out for local host operation
-#
-# DATABASES['default'] = dj_database_url.parse(CLEARDB_DATABASE_URL) #database settings for heroku deploy - comment out for local host operation
+CLEARDB_DATABASE_URL = os.environ.get("CLEARDB_DATABASE_URL", "") #database settings for heroku deploy - comment out for local host operation
+
+DATABASES['default'] = dj_database_url.parse(CLEARDB_DATABASE_URL) #database settings for heroku deploy - comment out for local host operation
 
 
 # Password validation
@@ -182,7 +182,7 @@ AWS_S3_HOST = 's3-eu-west-1.amazonaws.com'
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 # STATIC_URL = '/static/' #commented out for AWS implementation
-STATIC_ROOT = ''
+# STATIC_ROOT = ''
 #
 # STATICFILES_DIRS = (
 #     os.path.join(BASE_DIR, "static"), #commented out for AWS implementation
