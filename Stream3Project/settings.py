@@ -188,13 +188,12 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"), #commented out for AWS implementation
 )
 
-
-# STATICFILES_LOCATION = 'static'
+STATICFILES_LOCATION = 'static'
 # STATICFILES_STORAGE = 'custom_storages.StaticStorage'
 # STATIC_URL = "https://%s/" % AWS_S3_CUSTOM_DOMAIN
 #
 
-# MEDIAFILES_LOCATION = 'media'
+MEDIAFILES_LOCATION = 'media'
 # DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
 # MEDIA_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, MEDIAFILES_LOCATION)
 
