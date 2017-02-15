@@ -90,16 +90,16 @@ WSGI_APPLICATION = 'Stream3Project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3', # local host operation - Comment out original settings in order to push to heroku
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'), # local host operation - comment out original settings in order to push to heroku
+        # 'ENGINE': 'django.db.backends.sqlite3', # local host operation - Comment out original settings in order to push to heroku
+        # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'), # local host operation - comment out original settings in order to push to heroku
     }
 }
 
 
-# CLEARDB_DATABASE_URL = os.environ.get("CLEARDB_DATABASE_URL", "")
+CLEARDB_DATABASE_URL = os.environ.get("CLEARDB_DATABASE_URL", "")
 # #database settings for heroku deploy - comment out for local host operation
 #
-# DATABASES['default'] = dj_database_url.parse(CLEARDB_DATABASE_URL)
+DATABASES['default'] = dj_database_url.parse(CLEARDB_DATABASE_URL)
 # #database settings for heroku deploy - comment out for local host operation
 
 
@@ -146,8 +146,6 @@ AUTHENTICATION_BACKENDS = (
 
 DISQUS_WEBSITE_SHORTNAME='Stream3Project'
 
-
-
 SITE_ID = 1
 
 STRIPE_PUBLISHABLE = os.getenv('STRIPE_PUBLISHABLE', 'publishable key')
@@ -189,16 +187,16 @@ STATICFILES_DIRS = (
 )
 
 STATICFILES_LOCATION = 'static'
-STATICFILES_STORAGE = 'custom_storages.StaticStorage'
-STATIC_URL = "https://%s/" % AWS_S3_CUSTOM_DOMAIN
+STATICFILES_STORAGE = 'custom_storages.StaticStorage' #comment out for local host implementation
+STATIC_URL = "https://%s/" % AWS_S3_CUSTOM_DOMAIN #comment out for local host implementation
 
 
 MEDIAFILES_LOCATION = 'media'
-DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
-MEDIA_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, MEDIAFILES_LOCATION)
+DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage' #comment out for local host implementation
+MEDIA_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, MEDIAFILES_LOCATION) #comment out for local host implementation
 
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media') #commented out for AWS implementation
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # MEDIA_URL = '/media/' #comment out for AWS implementation
 
 

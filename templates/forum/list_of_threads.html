@@ -3,7 +3,7 @@
 {% block content %}
 
 
-
+<!-- This page shows the list of threads attached to a particular subject-->
 
     <!-- Page Content -->
     <div class="container">
@@ -14,10 +14,10 @@
                 <h1 class="page-header">{{ subject.name }}
 
                 </h1>
-                <ol class="breadcrumb" style="border: 5px solid darkred">
-                    <li><a href="index.html">Home</a>
+                <ol class="breadcrumb">
+                    <li><a href="{%  url 'index'  %}">Home</a>
                     </li>
-                    <li><a href="index.html">Forum</a>
+                    <li><a href="{%  url 'forum'  %}">Forum</a>
                     </li>
                     <li class="active">{{ subject.name }}</li>
 
@@ -36,6 +36,7 @@
                             <a href="{% url 'new_thread' subject.id %}" class="btn btn-primary">New Thread</a>
                         </p>
                     {% endif %}
+
                     {% for thread in subject.threads.all %}
                         {% include "forum/thread_title.html" %}
                     {% endfor %}

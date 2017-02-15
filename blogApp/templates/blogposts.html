@@ -3,41 +3,6 @@
 
 {% block content %}
 
-{#    <div id="masthead">#}
-{#        <div class="container">#}
-{#            <div class="row">#}
-{#                <h1>Blog</h1>#}
-{#                <p id="logo" class="lead">Read And Comment!</p>#}
-{#            </div>#}
-{#        </div>#}
-{#    </div>#}
-{##}
-{#     {%  if user.is_authenticated %}#}
-{#         <button class="btn btn-default" onclick="location.href='{% url 'new_post' %}'">New Post</button>#}
-{#        {% endif %}#}
-{##}
-{#    {% for post in posts %}#}
-{#        <div class="row">#}
-{#            <hr>#}
-{#            <div class="col-md-2 col-sm-3 text-center">#}
-{#                <a class="story-img" href="#">#}
-{#                    <img src="http://placehold.it/100" style="width:100px; height: 100px; background-color: #12ABB2; color: #ffffff;" class="img-circle">#}
-{#                    <img src="{% gravatar_url post.author.email 150 %}">#}
-{#                </a>#}
-{#            </div>#}
-{#            <div class="col-md-10 col-sm-9">#}
-{#                <h3>{{ post.title }}</h3>#}
-{#                <div class="row">#}
-{#                    <div class="col-xs-9">#}
-{#                        <p>{{ post.content|truncatewords:30 }}</p>#}
-{#                        <p><button class="btn btn-default" onclick="location.href={{ post.id }}">Read More</button></p>#}
-{#                        <p>{{ post.published_date }} | <strong>Views</strong> {{ post.views }} | <strong>Tag </strong>{{ post.tag }}</p>#}
-{#                    </div>#}
-{#                </div>#}
-{#            </div>#}
-{#        </div>#}
-
-
     <!-- Page Content -->
     <div class="container">
 
@@ -47,7 +12,7 @@
                     <small>Our Views On The World Today</small>
                 </h1>
                 <ol class="breadcrumb">
-                    <li><a href="index.html">Home</a>
+                    <li><a href="{%  url 'index'  %}">Home</a>
                     </li>
                     <li class="active">Blog</li>
                 </ol>
@@ -63,26 +28,24 @@
          <hr>
         {% endif %}
 
-
-
         <!-- Blog Post Row -->
         {% for post in posts %}
 
         <div class="row">
-            <div class="col-md-2 text-center">
+            <div class="col-md-3 text-center">
 
-                <p>{{ post.published_date }}</p>
+                <p><strong>{{ post.published_date }}</strong></p>
             </div>
             <div class="col-md-2">
                 <a onclick="location.href={{ post.id }}">
-                    <img style="border: solid darkred 5px" src="{% gravatar_url post.author.email 150 %}" class="img-responsive img-hover" onclick="location.href={{ post.id }}">
+                    <img src="{% gravatar_url post.author.email 150 %}" class="img-responsive img-hover blogimage" onclick="location.href={{ post.id }}">
                 </a>
             </div>
-            <div class="col-md-8">
+            <div class="col-md-7">
                 <h3>
-                    <a style="color: black" onclick="location.href={{ post.id }}">{{ post.title }}</a>
+                    <a class="colourblack" onclick="location.href={{ post.id }}">{{ post.title }}</a>
                 </h3>
-                <p>by <a style="color: black" >{{ post.author }}</a>
+                <p>by <a class="colourblack" >{{ post.author }}</a>
                 </p>
                 <p>{{ post.content|truncatewords:30 }}</p>
                  <p><strong>Views</strong> {{ post.views }} | <strong>Tag </strong>{{ post.tag }}</p>
@@ -91,8 +54,6 @@
             </div>
         </div>
         <!-- /.row -->
-
-
 
     {% endfor %}
 {% endblock %}
