@@ -1,15 +1,14 @@
+/*CSS User Stylesheet*/
+/*Divided into Elements, IDs and Classes sections*/
+
+/*Elements*/
+
 body {
     background: whitesmoke;
 }
-.story-img{
-    margin-top: 25%;
-    display: block;
-}
 
-.jumbotron{
-    font-size: 28px;
-    text-align: center;
-}
+
+/*IDs*/
 
 #acropolisimage {
     width: 100%;
@@ -20,6 +19,57 @@ body {
     font-weight: bold;
 }
 
+#profilemenu{
+    padding-top: 30px;
+}
+
+#profilecolumn{
+    padding-left: 50px;
+}
+
+#eisenhowerimage{
+    border: 5px darkred solid;
+    border-radius: 10px;
+    opacity: .8;
+}
+
+#blogpostauthorcolour{
+    color: black;
+}
+
+#disqusdiv{
+    background-color: white;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+#footerlinks{
+    text-align: center;
+    font-size: 15px;
+    padding: 20px;
+}
+
+#contactmessagebox{
+    border: darkred solid 5px;
+    border-radius: 10px;
+}
+
+#churchillimage{
+    border-radius: 10px;
+}
+
+
+/*Classes*/
+
+.story-img{
+    margin-top: 25%;
+    display: block;
+}
+
+.jumbotron{
+    font-size: 28px;
+    text-align: center;
+}
 
 .titlediv{
     text-align: center;
@@ -42,10 +92,6 @@ body {
     border-radius: 20px;
 }
 
-#churchillimage{
-    border-radius: 10px;
-}
-
 .ourteamimage{
     border: solid darkred 5px;
     border-radius: 10px;
@@ -57,25 +103,6 @@ body {
     border-radius: 15px;
 }
 
-#contactmessagebox{
-    border: darkred solid 5px;
-    border-radius: 10px;
-}
-
-#profilemenu{
-    padding-top: 30px;
-}
-
-#profilecolumn{
-    padding-left: 50px;
-}
-
-#eisenhowerimage{
-    border: 5px darkred solid;
-    border-radius: 10px;
-    opacity: .8;
-}
-
 .blogimage{
     border: solid darkred 5px;
     border-radius: 10px;
@@ -83,22 +110,6 @@ body {
 
 .colourblack{
     color: black;
-}
-
-#blogpostauthorcolour{
-    color: black;
-}
-
-#disqusdiv{
-    background-color: white;
-    padding: 5px;
-    border-radius: 10px;
-}
-
-#footerlinks{
-    text-align: center;
-    font-size: 15px;
-    padding: 20px;
 }
 
 .footerhref{
