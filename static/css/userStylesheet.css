@@ -7,7 +7,6 @@ body {
     background: whitesmoke;
 }
 
-
 /*IDs*/
 
 #acropolisimage {
@@ -19,99 +18,98 @@ body {
     font-weight: bold;
 }
 
-#profilemenu{
+#profilemenu {
     padding-top: 30px;
 }
 
-#profilecolumn{
+#profilecolumn {
     padding-left: 50px;
 }
 
-#eisenhowerimage{
+#eisenhowerimage {
     border: 5px darkred solid;
     border-radius: 10px;
     opacity: .8;
 }
 
-#blogpostauthorcolour{
+#blogpostauthorcolour {
     color: black;
 }
 
-#disqusdiv{
+#disqusdiv {
     background-color: white;
     padding: 5px;
     border-radius: 10px;
 }
 
-#footerlinks{
+#footerlinks {
     text-align: center;
     font-size: 15px;
     padding: 20px;
 }
 
-#contactmessagebox{
+#contactmessagebox {
     border: darkred solid 5px;
     border-radius: 10px;
 }
 
-#churchillimage{
+#churchillimage {
     border-radius: 10px;
 }
 
-
 /*Classes*/
 
-.story-img{
+.story-img {
     margin-top: 25%;
     display: block;
 }
 
-.jumbotron{
+.jumbotron {
     font-size: 28px;
     text-align: center;
 }
 
-.titlediv{
+.titlediv {
     text-align: center;
 }
 
-.linksimage{
+.linksimage {
     max-width: 100%;
     height: auto;
 }
 
-.whitefont{
+.whitefont {
     color: white;
 }
 
-.panel-default>.panel-heading-colour {
+.panel-default > .panel-heading-colour {
     background-color: darkred;
 }
 
-.linkimage{
+.linkimage {
     border-radius: 20px;
 }
 
-.ourteamimage{
+.ourteamimage {
     border: solid darkred 5px;
     border-radius: 10px;
 }
 
-.capitolimage{
+.capitolimage {
     height: 100%;
     border-top: 60px;
     border-radius: 15px;
 }
 
-.blogimage{
+.blogimage {
     border: solid darkred 5px;
     border-radius: 10px;
 }
 
-.colourblack{
+.colourblack {
     color: black;
 }
 
-.footerhref{
+.footerhref {
     padding: 10px;
 }

@@ -15,7 +15,7 @@
                     </small>
                 </h1>
                 <ol class="breadcrumb">
-                    <li><a href="{%  url 'index'  %}">Home</a>
+                    <li><a href="{% url 'index' %}">Home</a>
                     </li>
                     <li class="active">Blog Post</li>
                 </ol>
@@ -33,38 +33,40 @@
 
             </div>
 
-                <!-- Blog Post Content Column -->
+            <!-- Blog Post Content Column -->
             <div class="col-md-10 col-sm-9">
 
-                    <!-- Blog Post Title-->
-                    <h3>{{ post.title }}</h3>
-                    <div class="row">
+                <!-- Blog Post Title-->
+                <h3>{{ post.title }}</h3>
+                <div class="row">
 
-                        <!-- Blog Post Image-->
-                        <div class="col-xs-9">
-                            {% if post.image %}
-                            <img class="img-responsive" src="{{ MEDIA_URL }}{{ post.image}}">
-                            {% endif %}
+                    <!-- Blog Post Image-->
+                    <div class="col-xs-9">
+                        {% if post.image %}
+                            <img class="img-responsive" src="{{ MEDIA_URL }}{{ post.image }}">
+                        {% endif %}
 
-                            <!-- Blog Post Content-->
-                            <p>{{ post.content }}</p>
+                        <!-- Blog Post Content-->
+                        <p>{{ post.content }}</p>
 
-                             <!-- Date/Time -->
-                            <p><i class="fa fa-clock-o"></i> Posted on {{ post.published_date }} | <strong>Views</strong> {{ post.views }} | <strong>Tag </strong>{{ post.tag }}</p>
+                        <!-- Date/Time -->
+                        <p><i class="fa fa-clock-o"></i> Posted on {{ post.published_date }} |
+                            <strong>Views</strong> {{ post.views }} | <strong>Tag </strong>{{ post.tag }}</p>
 
-                             <hr>
+                        <hr>
 
-                            <p>
-                                <button class="btn btn-primary" onclick="location.href={%  url 'blog'  %}">Back To Blog</button>
-                                <button class="btn btn-primary" onclick="location.href='edit'">Edit</button>
-                            </p>
-                            <p>{{ post.published_date }} | <strong>Views</strong> {{ post.views }} |
-                                <strong>Tag </strong>{{ post.tag }}</p>
+                        <p>
+                            <button class="btn btn-primary" onclick="location.href={% url 'blog' %}">Back To Blog
+                            </button>
+                            <button class="btn btn-primary" onclick="location.href='edit'">Edit</button>
+                        </p>
+                        <p>{{ post.published_date }} | <strong>Views</strong> {{ post.views }} |
+                            <strong>Tag </strong>{{ post.tag }}</p>
 
-                            <!--div for Disqus box-->
-                            <div> {% load disqus_tags %} {% set_disqus_title post.title %} {% disqus_show_comments %}</div>
-                        </div>
+                        <!--div for Disqus box-->
+                        <div> {% load disqus_tags %} {% set_disqus_title post.title %} {% disqus_show_comments %}</div>
                     </div>
+                </div>
             </div>
         </div>
         <!-- /.row -->

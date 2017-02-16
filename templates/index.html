@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
-{%  block content %}
-{%  load staticfiles %}
+{% block content %}
+    {% load staticfiles %}
 
 
     <div class="row">
         <div class="col-lg-12">
-            <img id="acropolisimage" src = "{% static 'images/acropolistitle.jpg' %}">
+            <img id="acropolisimage" src="{% static 'images/acropolistitle.jpg' %}">
         </div>
     </div>
 
@@ -18,39 +18,39 @@
             <div class="col-md-4">
                 <div class="panel panel-default">
                     <div class=" panel-heading-colour panel-heading">
-                        <h4 class="whitefont"> <i class="fa fa-fw fa-check <!--whitefont-->"></i> Who Are We?</h4>
+                        <h4 class="whitefont"><i class="fa fa-fw fa-check <!--whitefont-->"></i> Who Are We?</h4>
                     </div>
                     <div class="panel-body">
                         <p>Counterpoint 2020 was established to provide an accountable and moderated forum for political
-                        discourse. Owing to the huge shifts in political discourse in 2016 and the increasing use of
-                        social media as an outlet for political expression...</p>
-                        <a href="{%  url 'about'  %}" class="btn btn-danger">Learn More</a>
+                            discourse. Owing to the huge shifts in political discourse in 2016 and the increasing use of
+                            social media as an outlet for political expression...</p>
+                        <a href="{% url 'about' %}" class="btn btn-danger">Learn More</a>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="panel panel-default">
                     <div class="panel-heading-colour panel-heading">
-                        <h4 class="whitefont"> <i class="fa fa-fw fa-book"></i> What We Do</h4>
+                        <h4 class="whitefont"><i class="fa fa-fw fa-book"></i> What We Do</h4>
                     </div>
                     <div class="panel-body">
                         <p>We provide a blog to update members on new developments in the political sphere and a
                             moderated forum for members to open threads on various topics grouped into three
                             main subjects - European, American and World Politics...</p>
-                        <a href="{%  url 'blog'  %}" class="btn btn-danger">Learn More</a>
+                        <a href="{% url 'blog' %}" class="btn btn-danger">Learn More</a>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="panel panel-default">
                     <div class="panel-heading-colour panel-heading">
-                        <h4 class="whitefont"> <i class="fa fa-fw fa-compass"></i> How To Join</h4>
+                        <h4 class="whitefont"><i class="fa fa-fw fa-compass"></i> How To Join</h4>
                     </div>
                     <div class="panel-body">
                         <p>Counterpoint 2020 is a subscription site with a monthly payment of only €2. We charge a
-                        subscription not only in order to cover the costs of running the site, but also to provide a
-                        form of verifiable identity for our members and posters....</p>
-                        <a href="{%  url 'register'  %}" class="btn btn-danger">Learn More</a>
+                            subscription not only in order to cover the costs of running the site, but also to provide a
+                            form of verifiable identity for our members and posters....</p>
+                        <a href="{% url 'register' %}" class="btn btn-danger">Learn More</a>
                     </div>
                 </div>
             </div>
@@ -63,18 +63,21 @@
                 <h2 class="page-header">Links</h2>
             </div>
             <div class="col-md-4 col-sm-6">
-                <a href="{%  url 'forum'  %}">
-                    <img class="img-responsive img-portfolio img-hover linkimage" src = "{% static 'images/irishparliament.jpg' %}">
+                <a href="{% url 'forum' %}">
+                    <img class="img-responsive img-portfolio img-hover linkimage"
+                         src="{% static 'images/irishparliament.jpg' %}">
                 </a>
             </div>
             <div class="col-md-4 col-sm-6">
-                <a href="{%  url 'blog'  %}">
-                    <img class="img-responsive img-portfolio img-hover linkimage" src = "{% static 'images/scribe.jpg' %}">
+                <a href="{% url 'blog' %}">
+                    <img class="img-responsive img-portfolio img-hover linkimage"
+                         src="{% static 'images/scribe.jpg' %}">
                 </a>
             </div>
             <div class="col-md-4 col-sm-6">
-                <a href="{%  url 'login'  %}">
-                    <img class="img-responsive img-portfolio img-hover linkimage" src = "{% static 'images/ladywriting.jpg' %}">
+                <a href="{% url 'login' %}">
+                    <img class="img-responsive img-portfolio img-hover linkimage"
+                         src="{% static 'images/ladywriting.jpg' %}">
                 </a>
             </div>
 
@@ -97,7 +100,8 @@
             </div>
             <div class="col-md-6">
 
-                <img class="img-responsive img-portfolio img-hover" id="churchillimage" src = "{% static 'images/churchill.jpg' %}">
+                <img class="img-responsive img-portfolio img-hover" id="churchillimage"
+                     src="{% static 'images/churchill.jpg' %}">
             </div>
         </div>
         <!-- /.row -->
@@ -106,4 +110,4 @@
 
     </div>
 
-{%  endblock %}
+{% endblock %}

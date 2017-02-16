@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% load bootstrap_tags %}
-{%  load staticfiles %}
+{% load staticfiles %}
 
 {% block head_js %}
     <script src="https://js.stripe.com/v2/" type="text/javascript"></script>
@@ -14,7 +14,7 @@
 
 
 
-{%  block content %}
+{% block content %}
 
     <!-- Page Content -->
     <div class="container">
@@ -26,7 +26,7 @@
                     <small>Join Us!</small>
                 </h1>
                 <ol class="breadcrumb">
-                    <li><a href="{%  url 'index'  %}">Home</a>
+                    <li><a href="{% url 'index' %}">Home</a>
                     </li>
                     <li class="active">Register</li>
                 </ol>
@@ -38,28 +38,28 @@
         <div class="row">
             <div class="col-lg-6">
 
-                    <form role="form" method="post" id="register-form" action="{% url 'register' %}">
-                        <div id="credit-card-errors" style="display:none">
-                            <div class="alert-message block-message error" id="stripe-error-message"></div>
-                        </div>
+                <form role="form" method="post" id="register-form" action="{% url 'register' %}">
+                    <div id="credit-card-errors" style="display:none">
+                        <div class="alert-message block-message error" id="stripe-error-message"></div>
+                    </div>
 
-                        <legend>Create a new account</legend>
-                        <p>Counterpoint 2020 is a subscription site with a monthly payment of only €2. We charge a
+                    <legend>Create a new account</legend>
+                    <p>Counterpoint 2020 is a subscription site with a monthly payment of only €2. We charge a
                         subscription not only in order to cover the costs of running the site, but also to provide a
-                        form of verifiable identity for our members and posters.</p><hr>
-                        {% csrf_token %}
-                        {{ form| as_bootstrap }}
-                        <div class="form-group">
-                            <input class="btn btn-primary" id="validate_card_btn" name="commit" type="submit"
-                                   value="Validate Credit Card & Create Account">
-                        </div>
-                    </form>
+                        form of verifiable identity for our members and posters.</p>
+                    <hr>
+                    {% csrf_token %}
+                    {{ form| as_bootstrap }}
+                    <div class="form-group">
+                        <input class="btn btn-primary" id="validate_card_btn" name="commit" type="submit"
+                               value="Validate Credit Card & Create Account">
+                    </div>
+                </form>
             </div>
 
             <div class="col-lg-6">
                 <br><br>
-                <img class="img-responsive" id="eisenhowerimage" src = "{% static 'images/eisenhowerquote.jpg' %}">
-
+                <img class="img-responsive" id="eisenhowerimage" src="{% static 'images/eisenhowerquote.jpg' %}">
 
 
             </div>
@@ -70,5 +70,5 @@
     </div>
     <!-- /.container -->
 
-{%  endblock %}
+{% endblock %}
 

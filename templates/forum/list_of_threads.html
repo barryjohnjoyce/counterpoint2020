@@ -3,7 +3,7 @@
 {% block content %}
 
 
-<!-- This page shows the list of threads attached to a particular subject-->
+    <!-- This page shows the list of threads attached to a particular subject-->
 
     <!-- Page Content -->
     <div class="container">
@@ -15,9 +15,9 @@
 
                 </h1>
                 <ol class="breadcrumb">
-                    <li><a href="{%  url 'index'  %}">Home</a>
+                    <li><a href="{% url 'index' %}">Home</a>
                     </li>
-                    <li><a href="{%  url 'forum'  %}">Forum</a>
+                    <li><a href="{% url 'forum' %}">Forum</a>
                     </li>
                     <li class="active">{{ subject.name }}</li>
 

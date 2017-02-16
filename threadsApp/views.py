@@ -1,4 +1,3 @@
-
 from django.shortcuts import render, get_object_or_404
 from threadsApp.models import ThreadSubject, Thread, ThreadComment
 from django.shortcuts import redirect
@@ -10,6 +9,7 @@ from .forms import ThreadForm, PostForm
 from django.forms import formset_factory
 from pollsApp.forms import PollSubjectForm, PollForm
 
+
 def forum(request):
     return render(request, 'forum/forum.html', {'subjects': ThreadSubject.objects.all()})
 
@@ -17,6 +17,7 @@ def forum(request):
 def threads(request, subject_id):
     subject = get_object_or_404(ThreadSubject, pk=subject_id)
     return render(request, 'forum/list_of_threads.html', {'subject': subject})
+
 
 @login_required
 def new_thread(request, subject_id):
@@ -27,7 +28,7 @@ def new_thread(request, subject_id):
         post_form = PostForm(request.POST)
         poll_form = PollForm(request.POST)
         poll_subject_formset = poll_subject_formset(request.POST)
-        if thread_form.is_valid() and post_form.is_valid()and poll_form.is_valid() and poll_subject_formset.is_valid():
+        if thread_form.is_valid() and post_form.is_valid() and poll_form.is_valid() and poll_subject_formset.is_valid():
             thread = thread_form.save(False)
             thread.subject = subject
             thread.user = request.user
@@ -66,6 +67,7 @@ def new_thread(request, subject_id):
     args.update(csrf(request))
 
     return render(request, 'forum/thread_box_form.html', args)
+
 
 def thread(request, thread_id):
     thread_ = get_object_or_404(Thread, pk=thread_id)
@@ -139,6 +141,7 @@ def delete_post(request, post_id):
 
 
 from pollsApp.models import PollSubject
+
 
 @login_required
 def thread_vote(request, thread_id, subject_id):

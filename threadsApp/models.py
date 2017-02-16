@@ -4,6 +4,7 @@ from django.utils import timezone
 from tinymce.models import HTMLField
 from django.conf import settings
 
+
 # Create your models here.
 
 class ThreadSubject(models.Model):
@@ -12,6 +13,7 @@ class ThreadSubject(models.Model):
 
     def __unicode__(self):
         return self.name
+
 
 class Thread(models.Model):
     name = models.CharField(max_length=255)
@@ -22,6 +24,7 @@ class Thread(models.Model):
     def __unicode__(self):
         return self.name
 
+
 class ThreadComment(models.Model):
     thread = models.ForeignKey(Thread, related_name='posts')
     comment = HTMLField(blank=True)
@@ -30,4 +33,3 @@ class ThreadComment(models.Model):
 
     def __unicode__(self):
         return self.comment
-

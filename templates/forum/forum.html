@@ -2,10 +2,10 @@
 
 {% load thread_extras %}
 {% block content %}
-{% load staticfiles %}
+    {% load staticfiles %}
 
 
-   <!-- Page Content -->
+    <!-- Page Content -->
     <div class="container">
 
         <!-- Page Heading/Breadcrumbs -->
@@ -15,7 +15,7 @@
                     <small>Subjects</small>
                 </h1>
                 <ol class="breadcrumb">
-                    <li><a href="{%  url 'index'  %}">Home</a>
+                    <li><a href="{% url 'index' %}">Home</a>
                     </li>
                     <li class="active">Forum</li>
                 </ol>
@@ -52,7 +52,6 @@
                 {% endfor %}
 
 
-
             </div>
         </div>
         <!-- /.row -->
@@ -61,4 +60,4 @@
     <!-- /.container -->
 
 
- {% endblock %}
+{% endblock %}
